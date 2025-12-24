@@ -52,8 +52,8 @@ public class Queue<T> {
     }
 
     public T peek() {
-        if (head == null) {
-            return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
         }
         return head.data;
     }
