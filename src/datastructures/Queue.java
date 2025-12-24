@@ -1,19 +1,10 @@
-package Queue;
+package datastructures;
 
 import java.util.NoSuchElementException;
 
 public class Queue<T> {
-    private class Item {
-        T data;
-        Item next;
-
-        Item(T data) {
-            this.data = data;
-            this.next = null;
-        }
-    }
-    private Item head;
-    private Item tail;
+    private Node<T> head;
+    private Node<T> tail;
     private int size;
 
     public Queue() {
@@ -23,7 +14,7 @@ public class Queue<T> {
     }
 
     public void add(T data) {
-        Item newItem = new Item(data);
+        Node<T> newItem = new Node<T>(data);
 
         if (isEmpty()) {
             head = newItem;

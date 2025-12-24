@@ -1,4 +1,5 @@
-import Queue.Queue;
+import datastructures.Queue;
+import datastructures.Stack;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -19,5 +20,21 @@ public class Main {
         System.out.println("Size: " + q.size());      // 1
         System.out.println("Remove: " + q.remove());  // Third
         System.out.println("Empty? " + q.isEmpty());  // true
+
+        Stack<String> s = new Stack<String>();
+
+        System.out.println("Empty? " + s.isEmpty());  // true
+
+        s.push("First");
+        s.push("Second");
+        s.push("Third");
+
+        System.out.println("Size: " + s.size());      // 3
+        System.out.println("Peek: " + s.peek());      // Third
+        System.out.println("Pop: " + s.pop());        // Third
+        System.out.println("Pop: " + s.pop());        // Second
+        System.out.println("Size: " + s.size());      // 1
+        System.out.println("Pop: " + s.pop());        // First
+        System.out.println("Empty? " + s.isEmpty());  // true
     }
 }
