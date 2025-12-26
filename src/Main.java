@@ -46,25 +46,32 @@ public class Main {
 //        System.out.println(list.get(1));  // "B"
 //        list.remove(1);
 //        System.out.println(list.indexOf("C"));  // 1
-//        Graph<String> graph = new Graph<>(false);  // Undirected
-//        System.out.println(graph.getEdgeCount());  // 0
-//        graph.addEdge("A", "B");
-//        System.out.println(graph.hasEdge("B", "A"));
-//        System.out.println(graph.getEdgeCount());  // 1
-//        graph.addEdge("B", "C");
-//        System.out.println(graph.getEdgeCount());  // 2
-//        graph.addEdge("C", "D");
-//        System.out.println(graph.getEdgeCount());  // 3
-//        graph.addEdge("D", "A");
-//        System.out.println(graph.hasEdge("A", "D"));
-//        System.out.println(graph.getEdgeCount());  // 4
-//        System.out.println(graph.getVertexCount()); // 4
-        Graph<String> directedGraph = new Graph<>(true);  // Directed
 
-        directedGraph.addEdge("A", "B");
-        System.out.println(directedGraph.hasEdge("B", "A"));
-        System.out.println(directedGraph.getEdgeCount());  // 1
-        directedGraph.addEdge("B", "C");
-        System.out.println(directedGraph.getEdgeCount());  // 2
+//        Graph<String> graph = new Graph<>(false);
+//        graph.addEdge("A", "B");
+//        graph.addEdge("B", "C");
+//        graph.addEdge("C", "D");
+//        graph.addEdge("A", "C");
+//        System.out.println(graph.getVertexCount());  // 4
+//        System.out.println(graph.getEdgeCount());    // 4
+//        System.out.println(graph.removeVertex("C"));  // true
+//        System.out.println(graph.getVertexCount());  // 3
+//        System.out.println(graph.getEdgeCount());    // 1
+//        System.out.println(graph.hasEdge("A", "C"));  // false
+//        System.out.println(graph.hasEdge("B", "C"));  // false
+//        System.out.println(graph.hasEdge("C", "D"));  // false
+//        System.out.println(graph.hasEdge("A", "B"));  // true
+
+//        Graph<String> dirGraph = new Graph<>(true);
+//
+//        dirGraph.addEdge("A", "B");
+//        dirGraph.addEdge("B", "C");
+//        dirGraph.addEdge("D", "C");
+//        dirGraph.addEdge("C", "A");
+//        System.out.println(dirGraph.removeVertex("C"));  // true
+//        System.out.println(dirGraph.hasEdge("B", "C"));  // false
+//        System.out.println(dirGraph.hasEdge("D", "C"));  // false
+//        System.out.println(dirGraph.hasEdge("C", "A"));  // false
+//        System.out.println(dirGraph.hasEdge("A", "B"));  // true
     }
 }

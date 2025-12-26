@@ -54,5 +54,43 @@ public class Graph<T> {
         return isDirected ? count : count / 2;
     }
 
-    // removeVertex, removeEdge, BFS, DFS
+    public boolean removeEdge (T from, T to) {
+        if (!hasVertex(from) || !hasVertex(to)) {
+            return false;
+        }
+
+        if (!hasEdge(from, to)) {
+            return false;
+        }
+
+        adjacencyList.get(from).remove(to);
+
+        if (!isDirected) {
+            adjacencyList.get(to).remove(from);
+        }
+
+        return true;
+    }
+
+    public boolean removeVertex(T vertex) {
+        if (!hasVertex(vertex)) {
+            return false;
+        }
+
+        if (!isDirected) {
+            Set<T> neighbors = adjacencyList.get(vertex);
+
+            neighbors.forEach((neighbor) -> {
+                adjacencyList.get(neighbor).remove(vertex);
+            });
+        } else {
+            for (Set<T> neighbors : adjacencyList.values()) {
+                neighbors.remove(vertex);
+            }
+        }
+
+        adjacencyList.remove(vertex);
+
+        return true;
+    }
 }
