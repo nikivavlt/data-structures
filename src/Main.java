@@ -1,3 +1,4 @@
+import datastructures.Graph;
 import datastructures.LinkedList;
 import datastructures.Queue;
 import datastructures.Stack;
@@ -38,12 +39,32 @@ public class Main {
 //        System.out.println("Pop: " + s.pop());        // First
 //        System.out.println("Empty? " + s.isEmpty());  // true
 
-        LinkedList<String> list = new LinkedList<>();
-        list.add("A");
-        list.add("C");
-        list.add(1, "B");
-        System.out.println(list.get(1));  // "B"
-        list.remove(1);
-        System.out.println(list.indexOf("C"));  // 1
+//        LinkedList<String> list = new LinkedList<>();
+//        list.add("A");
+//        list.add("C");
+//        list.add(1, "B");
+//        System.out.println(list.get(1));  // "B"
+//        list.remove(1);
+//        System.out.println(list.indexOf("C"));  // 1
+//        Graph<String> graph = new Graph<>(false);  // Undirected
+//        System.out.println(graph.getEdgeCount());  // 0
+//        graph.addEdge("A", "B");
+//        System.out.println(graph.hasEdge("B", "A"));
+//        System.out.println(graph.getEdgeCount());  // 1
+//        graph.addEdge("B", "C");
+//        System.out.println(graph.getEdgeCount());  // 2
+//        graph.addEdge("C", "D");
+//        System.out.println(graph.getEdgeCount());  // 3
+//        graph.addEdge("D", "A");
+//        System.out.println(graph.hasEdge("A", "D"));
+//        System.out.println(graph.getEdgeCount());  // 4
+//        System.out.println(graph.getVertexCount()); // 4
+        Graph<String> directedGraph = new Graph<>(true);  // Directed
+
+        directedGraph.addEdge("A", "B");
+        System.out.println(directedGraph.hasEdge("B", "A"));
+        System.out.println(directedGraph.getEdgeCount());  // 1
+        directedGraph.addEdge("B", "C");
+        System.out.println(directedGraph.getEdgeCount());  // 2
     }
 }
