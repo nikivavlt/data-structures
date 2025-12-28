@@ -1,7 +1,4 @@
-import datastructures.Graph;
-import datastructures.LinkedList;
-import datastructures.Queue;
-import datastructures.Stack;
+import datastructures.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -73,5 +70,51 @@ public class Main {
 //        System.out.println(dirGraph.hasEdge("D", "C"));  // false
 //        System.out.println(dirGraph.hasEdge("C", "A"));  // false
 //        System.out.println(dirGraph.hasEdge("A", "B"));  // true
+
+        BinarySearchTree<Integer> tree = new BinarySearchTree<>();
+
+        System.out.println("Empty? " + tree.isEmpty());  // true
+        System.out.println("Size: " + tree.size());      // 0
+
+        tree.insert(50);
+        tree.insert(30);
+        tree.insert(70);
+        tree.insert(20);
+        tree.insert(40);
+        tree.insert(60);
+        tree.insert(80);
+
+        /*
+               50
+              /  \
+            30    70
+           /  \   / \
+          20  40 60  80
+        */
+
+        System.out.println("Size: " + tree.size());           // 7
+        System.out.println("Height: " + tree.height());       // 2
+        System.out.println("Min: " + tree.findMin());         // 20
+        System.out.println("Max: " + tree.findMax());         // 80
+        System.out.println("Search 40: " + tree.search(40));  // true
+        System.out.println("Search 25: " + tree.search(25));  // false
+        System.out.println("InOrder: " + tree.inOrder());
+        // [20, 30, 40, 50, 60, 70, 80]
+
+        tree.remove(20);  // Remove leaf
+        System.out.println("After remove(20): " + tree.inOrder());
+        // [30, 40, 50, 60, 70, 80]
+
+        tree.remove(30);  // Remove node with two children
+        System.out.println("After remove(30): " + tree.inOrder());
+        // [40, 50, 60, 70, 80]
+
+        tree.remove(50);  // Remove root
+        System.out.println("After remove(50): " + tree.inOrder());
+        // [40, 60, 70, 80]
+
+        System.out.println("Final size: " + tree.size());  // 4
+
+        // dynamic array, hash table, heap, set, vector, tests?
     }
 }
