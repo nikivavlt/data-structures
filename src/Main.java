@@ -115,6 +115,6 @@ public class Main {
 
         System.out.println("Final size: " + tree.size());  // 4
 
-        // dynamic array, hash table, heap, set, vector, tests?
+        // TODO: Implement tests
     }
 }
