@@ -1,8 +1,9 @@
 package datastructures;
 
+import java.util.Iterator;
 import java.util.Objects;
 
-public class LinkedList<T> {
+public class LinkedList<T> implements Iterable<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size;
@@ -140,5 +141,21 @@ public class LinkedList<T> {
 
     public int size() {
         return size;
+    }
+
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private Node<T> current = head;
+
+            public boolean hasNext() {
+                return current != null;
+            }
+
+            public T next() {
+                T data = current.data;
+                current = current.next;
+                return data;
+            }
+        };
     }
 }
