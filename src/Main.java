@@ -139,6 +139,6 @@ public class Main {
         System.out.println("Get date: " + table.get("date"));      // 11 ✓
 
 
-        // TODO: Implement tests
+        // TODO: Implement tests, check @SuppressWarnings("unchecked")?
     }
 }
