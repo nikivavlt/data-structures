@@ -1,7 +1,5 @@
 import datastructures.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 //        Queue<String> q = new Queue<String>();
@@ -132,13 +130,9 @@ public class Main {
         System.out.println("After resize - Size: " + table.size());  // 4
         System.out.println("After resize - Capacity: " + table.getCapacity());  // 8
 
-        // Verify all entries still accessible after resize
-        System.out.println("Get apple: " + table.get("apple"));    // 5 ✓
-        System.out.println("Get banana: " + table.get("banana"));  // 7 ✓
-        System.out.println("Get cherry: " + table.get("cherry"));  // 9 ✓
-        System.out.println("Get date: " + table.get("date"));      // 11 ✓
-
-
-        // TODO: Implement tests, check @SuppressWarnings("unchecked")?
+        System.out.println("Get apple: " + table.get("apple"));    // 5
+        System.out.println("Get banana: " + table.get("banana"));  // 7
+        System.out.println("Get cherry: " + table.get("cherry"));  // 9
+        System.out.println("Get date: " + table.get("date"));      // 11
     }
 }
