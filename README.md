@@ -2,8 +2,6 @@
 
 Custom implementations of common data structures in Java with test coverage.
 
-## Data Structures Implemented
-
 - **Queue** - FIFO queue using linked nodes
 - **Stack** - LIFO stack using linked nodes
 - **LinkedList** - Doubly-ended linked list with iteration support
