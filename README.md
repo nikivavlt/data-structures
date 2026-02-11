@@ -2,12 +2,12 @@
 
 Custom implementations of common data structures in Java with test coverage.
 
-- **Queue** - FIFO queue using linked nodes
-- **Stack** - LIFO stack using linked nodes
-- **LinkedList** - Doubly-ended linked list with iteration support
-- **BinarySearchTree** - Self-balancing binary search tree
-- **Graph** - Adjacency list implementation (directed and undirected)
-- **HashTable** - Hash table with collision handling and auto-resizing
+- **Queue**
+- **Stack**
+- **LinkedList**
+- **BinarySearchTree**
+- **Graph** 
+- **HashTable**
 
 ## Project Structure
 
