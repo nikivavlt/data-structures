@@ -1,6 +1,6 @@
 # Data Structures
 
-Custom implementations of common data structures in Java with comprehensive test coverage.
+Custom implementations of common data structures in Java with test coverage.
 
 ## Data Structures Implemented
 
